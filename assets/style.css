@@ -1,0 +1,31 @@
+body {
+  text-align: center;
+}
+
+h2 {
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+p {
+  font-size: 18px;
+}
+
+form {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-style: italic;
+}
+
+input {
+  padding: 10px;
+  margin: 3px;
+  font-size: 14px;
+  width: 300px;
+}
+
+.btn-guess {
+  padding: 10px;
+  background: #A8F9FB;
+  font-style: bold;
+  font-size: 20px;
+  border: 0px;
+}
