@@ -15,7 +15,7 @@ form {
   font-style: italic;
 }
 
-input {
+.num {
   padding: 10px;
   margin: 3px;
   font-size: 14px;
@@ -24,8 +24,16 @@ input {
 
 .btn-guess {
   padding: 10px;
+  margin-top: 4px;
   background: #A8F9FB;
   font-style: bold;
   font-size: 20px;
   border: 0px;
+}
+
+.btn-bottom {
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #cccccc;
+  background-color: white;
 }
