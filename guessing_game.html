@@ -6,6 +6,9 @@
   <title>Guessing Game</title>
 
   <link rel="stylesheet" href="assets/style.css">
+
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/js/guessingGame.js"></script>
 </head>
 
 <body>
@@ -19,8 +22,8 @@
   </p>
 
   <form action="#" method="post">
-    <input class="num" type="text" name="user's guess" placeholder="Input a number between 1 and 100">
-    <br><input type="submit" name="submit" value="Submit your guess" class="btn-guess">
+    <input class="num" type="text" name="user's guess" id="guess" placeholder="Input a number between 1 and 100">
+    <br><input type="submit" name="submit" value="Submit your guess" class="btn-guess" id="submit">
 
     <p>
       <input type="submit" name="play again" value="Play again" class="btn-bottom">
@@ -31,4 +34,5 @@
   <p>You have # guesses remaining</p>
 
 </body>
-</html
+</html>
+
