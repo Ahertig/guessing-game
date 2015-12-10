@@ -20,14 +20,6 @@ function playersGuessSubmission(event){
   playersGuess = parseInt($("#guess").val());
   $("#guess").val("");
   debugger;
-
-  // playersGuess = parseInt(document.getElementById("guess").value);
-  // alert(playersGuess);
-
-  // $('#guess').on('click', function() {
-  //     console.log($(this).val());
-  //     debugger;
-  // });
 }
 
 // Determine if the next guess should be a lower or higher number
@@ -65,7 +57,6 @@ $(document).ready(function() {
   $('#submit').on('click', function(event) {
       playersGuessSubmission(event);
       event.preventDefault();
-      checkGuess();
   });
 });
 
