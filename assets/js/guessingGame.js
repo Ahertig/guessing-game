@@ -4,7 +4,9 @@
 var playersGuess,
     winningNumber = generateWinningNumber()
 
-var guesses = [];
+var Player = {guesses: [],
+  numGuess: 0
+}
 
 /* **** Guessing Game Functions **** */
 
@@ -19,22 +21,36 @@ function generateWinningNumber(){
 function playersGuessSubmission(event){
   playersGuess = parseInt($("#guess").val());
   $("#guess").val("");
-  debugger;
+  checkGuess(event);
 }
 
 // Determine if the next guess should be a lower or higher number
 
 function lowerOrHigher(){
-	// add code here
 }
 
 // Check if the Player's Guess is the winning number 
 
-function checkGuess(){
-	if (playersGuess === winningNumber) {
-    return 'You win the game!';
-  } else {
-    $("#guess").append("<p>Try Again</p>");
+function checkGuess(event){
+  if (Player.guesses.indexOf(playersGuess) > -1) {
+    $(".feedback").remove();
+    $("#guess").after("<p class='feedback'>You already submitted this number</p>");
+  }
+  else {
+    if (Player.guesses.indexOf(playersGuess) == -1) {
+      Player.numGuess++;
+      Player.guesses.push(playersGuess)
+    }
+    if (Player.numGuess <= 5) {
+    	if (playersGuess === winningNumber) {
+        $(".feedback").remove();
+        $("#guess").after("<p class='feedback'>You win!</p>");
+      } else {
+        $(".feedback").remove();
+        $("#guess").after("<p class='feedback'>Try Again</p>");
+        $("#guesses-left").text(5 - Player.numGuess);
+      }
+    }
   }
 }
 
