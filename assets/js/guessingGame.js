@@ -18,6 +18,7 @@ function generateWinningNumber(){
 
 function playersGuessSubmission(event){
   playersGuess = parseInt($("#guess").val());
+  $("#guess").val("");
   debugger;
 
   // playersGuess = parseInt(document.getElementById("guess").value);
@@ -62,8 +63,9 @@ function playAgain(){
 
 $(document).ready(function() {
   $('#submit').on('click', function(event) {
-      alert("You clicked!");
       playersGuessSubmission(event);
+      event.preventDefault();
+      checkGuess();
   });
 });
 
