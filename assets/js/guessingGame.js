@@ -27,6 +27,13 @@ function playersGuessSubmission(event){
 // Determine if the next guess should be a lower or higher number
 
 function lowerOrHigher(){
+  if (playersGuess > winningNumber) {
+    $(".low-high").remove();
+    $(".feedback").after("<p class='low-high'>Your guess is too high.</p>");
+  } else {
+    $(".low-high").remove();
+    $(".feedback").after("<p class='low-high'>Your guess is too low.</p>");
+  }
 }
 
 // Check if the Player's Guess is the winning number 
@@ -48,6 +55,7 @@ function checkGuess(event){
       } else {
         $(".feedback").remove();
         $("#guess").after("<p class='feedback'>Try Again</p>");
+        lowerOrHigher();
         $("#guesses-left").text(5 - Player.numGuess);
       }
     }
@@ -75,6 +83,7 @@ $(document).ready(function() {
       event.preventDefault();
   });
 });
+
 
 
 
