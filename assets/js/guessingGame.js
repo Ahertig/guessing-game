@@ -51,7 +51,9 @@ function checkGuess(event){
     if (Player.numGuess <= 5) {
     	if (playersGuess === winningNumber) {
         $(".feedback").remove();
+        $(".low-high").remove();
         $("#guess").after("<p class='feedback'>You win!</p>");
+        winner();
       } else {
         $(".feedback").remove();
         $("#guess").after("<p class='feedback'>Try Again</p>");
@@ -76,6 +78,10 @@ function playAgain(){
   Player.numGuess = 0;
 }
 
+function winner() {
+  $('h2').text("Congrats! You won the guessing game!");
+  $('h2').addClass('winner');
+}
 
 /* **** Event Listeners/Handlers ****  */
 

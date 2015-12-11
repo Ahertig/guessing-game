@@ -37,3 +37,9 @@ form {
   border: 2px solid #cccccc;
   background-color: white;
 }
+
+.winner {
+  font-size: 50px;
+  color: purple;
+  text-shadow: 5px 5px #D2691E;
+}
