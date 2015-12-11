@@ -72,7 +72,8 @@ function provideHint(){
 // Allow the "Player" to Play Again
 
 function playAgain(){
-	// reset everything
+	Player.guesses = [];
+  Player.numGuess = 0;
 }
 
 
@@ -89,6 +90,9 @@ $(document).ready(function() {
   $('.btn-bottom:last').on('click', function(event) {
       provideHint(event);
       event.preventDefault();
+  });
+  $('.btn-bottom:first').on('click', function(event) {
+      playAgain(event);
   });
 });
 
