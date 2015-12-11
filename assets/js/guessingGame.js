@@ -65,7 +65,7 @@ function checkGuess(event){
 // Create a provide hint button that provides additional clues to the "Player"
 
 function provideHint(){
-	// add code here
+	$("form").append("<p class='low-high'>The winning number is either " + generateWinningNumber() + ", " + winningNumber + ", or " + generateWinningNumber() + "</p>");
 }
 
 // Allow the "Player" to Play Again
@@ -84,7 +84,12 @@ $(document).ready(function() {
   });
 });
 
-
+$(document).ready(function() {
+  $('.btn-bottom:last').on('click', function(event) {
+      provideHint(event);
+      event.preventDefault();
+  });
+});
 
 
 
