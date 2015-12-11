@@ -65,13 +65,14 @@ function checkGuess(event){
 // Create a provide hint button that provides additional clues to the "Player"
 
 function provideHint(){
-	$("form").append("<p class='low-high'>The winning number is either " + generateWinningNumber() + ", " + winningNumber + ", or " + generateWinningNumber() + "</p>");
+  $(".low-high").remove();
+  $("form").append("<p class='low-high'>The winning number is either " + generateWinningNumber() + ", " + winningNumber + ", or " + generateWinningNumber() + "</p>");
 }
 
 // Allow the "Player" to Play Again
 
 function playAgain(){
-	// add code here
+	// reset everything
 }
 
 
